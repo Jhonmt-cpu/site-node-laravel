@@ -14,21 +14,25 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
-});
+    return view('site.home');
+})->name('site.home');
 
 Route::get('/contact', function () {
-    return view('contact');
-});
+    return view('site.contact');
+})->name('site.contact');
 
 Route::get('/about', function () {
-    return view('about');
-});
+    return view('site.about');
+})->name('site.about');
 
 Route::get('/logos', function () {
-    return view('logos');
-});
+    return view('site.logos');
+})->name('site.logos');
 
 Route::get('/frameworks/:id', function () {
-    return view('frameworks');
-});
+    return view('site.frameworks');
+})->name('site.frameworks');
+
+Route::get('/courses', function () {
+    return view('site.courses');
+})->name('site.courses');
