@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -36,3 +37,5 @@ Route::get('/frameworks/:id', function () {
 Route::get('/courses', function () {
     return view('site.courses');
 })->name('site.courses');
+
+Route::post('/contact/new', [ContactsController::class, 'store'])->name('register_contact');

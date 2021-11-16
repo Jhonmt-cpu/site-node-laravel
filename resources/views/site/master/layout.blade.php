@@ -13,9 +13,9 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-success">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Carousel</a>
+                <a class="navbar-brand" href="#">Node.js</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -25,16 +25,18 @@
                             <a class="nav-link {{ (Route::current()->getName() === 'site.home' ? 'active' : '')}}" aria-current="page" href="{{ route('site.home') }}">Home</a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link {{ (Route::current()->getName() === 'site.courses' ? 'active' : '') }}" href="{{ route('site.courses') }}">Cursos</a>
+                            <a class="nav-link {{ (Route::current()->getName() === 'site.frameworks' ? 'active' : '') }}" href="{{ route('site.frameworks') }}">Frameworks</a>
                         </li>
                         <li class="nav-item ">
                             <a class="nav-link {{ (Route::current()->getName() === 'site.contact' ? 'active' : '') }}" href="{{ route('site.contact') }}">Contato</a>
                         </li>
+                        <li class="nav-item ">
+                            <a class="nav-link {{ (Route::current()->getName() === 'site.logos' ? 'active' : '') }}" href="{{ route('site.logos') }}">Logos</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link {{ (Route::current()->getName() === 'site.about' ? 'active' : '') }}" href="{{ route('site.about') }}">Sobre</a>
+                        </li>
                     </ul>
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
                 </div>
             </div>
         </nav>
