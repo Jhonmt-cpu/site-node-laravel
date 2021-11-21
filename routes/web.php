@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ContactsController;
+use App\Http\Controllers\TechesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,12 +31,16 @@ Route::get('/logos', function () {
     return view('site.logos');
 })->name('site.logos');
 
-Route::get('/frameworks/:id', function () {
-    return view('site.frameworks');
-})->name('site.frameworks');
+Route::get('/frameworks', [TechesController::class, 'findAll'])->name('site.frameworks');
 
 Route::get('/courses', function () {
     return view('site.courses');
 })->name('site.courses');
 
 Route::post('/contact/new', [ContactsController::class, 'store'])->name('register_contact');
+
+Route::post('/techs/new', [TechesController::class, 'store'])->name('register_tech');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');

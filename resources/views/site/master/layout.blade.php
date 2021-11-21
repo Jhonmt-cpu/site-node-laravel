@@ -8,7 +8,8 @@
     <!--<link rel="stylesheet" href="/css/home.css">-->
     <title>Home</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="/css/global.css">
+    @yield('headers')
 </head>
 
 <body>
@@ -36,7 +37,15 @@
                         <li class="nav-item ">
                             <a class="nav-link {{ (Route::current()->getName() === 'site.about' ? 'active' : '') }}" href="{{ route('site.about') }}">Sobre</a>
                         </li>
+
                     </ul>
+                    @auth
+                    <a class="btn btn-outline-light my-2 pr-2 my-sm-0" href="{{ route('dashboard') }}">Dashboard</a>
+                    @endauth
+                    @guest
+                    <a class="btn btn-outline-light my-2 my-sm-0 register-button" href="{{ route('register') }}">Cadastrar</a>
+                    <a class="btn btn-outline-dark my-2 ml-2 my-sm-0" href="{{ route('login') }}">Entrar</a>
+                    @endguest
                 </div>
             </div>
         </nav>

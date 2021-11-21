@@ -12,7 +12,19 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
-    .postCss('resources/css/app.css', 'public/css', [
-        //
+    .sass('resources/assets/sass/home.scss', 'public/sass')
+    .sass('resources/assets/sass/frameworks.scss', 'public/sass')
+    .sass('resources/assets/sass/logos.scss', 'public/sass')
+    .sass('resources/assets/sass/about.scss', 'public/sass')
+    .postCss('resources/css/global.css', 'public/css', [
+        require('postcss-import'),
+        require('tailwindcss'),
     ])
-    .sass('resources/assets/sass/home.scss', 'public/css');
+    .postCss('resources/css/app.css', 'public/css', [
+        require('postcss-import'),
+        require('tailwindcss'),
+    ]);
+
+if (mix.inProduction()) {
+    mix.version();
+}

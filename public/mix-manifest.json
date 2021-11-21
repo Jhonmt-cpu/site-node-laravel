@@ -1,5 +1,9 @@
 {
     "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css",
-    "/css/home.css": "/css/home.css"
+    "/css/global.css": "/css/global.css",
+    "/sass/about.css": "/sass/about.css",
+    "/sass/logos.css": "/sass/logos.css",
+    "/sass/frameworks.css": "/sass/frameworks.css",
+    "/sass/home.css": "/sass/home.css",
+    "/css/app.css": "/css/app.css"
 }

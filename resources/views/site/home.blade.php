@@ -1,164 +1,96 @@
 @extends('site.master.layout')
 
+@section('headers')
+<link rel="stylesheet" href="/sass/home.css">
+@endsection
+
 @section('content')
-<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
-        <div class="carousel-item active">
-            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                <rect width="100%" height="100%" fill="#777" />
-            </svg>
+      <div class="carousel-item active">
+        <img src="{{asset("img/capaNode.png")}}" class="img-fluid"/>
+        <div class="container">
+          <div class="carousel-caption text-left">
 
-            <div class="container">
-                <div class="carousel-caption text-start">
-                    <h1>Example headline.</h1>
-                    @if(date('H') >= 0 && date('H') <= 12)
-                        <p>Bom dia {{date('H')}}</p>
-                    @elseif(date('H') >= 13 && date('H') <= 18)
-                        <p>Boa tarde</p>
-                    @else
-                        <p>Boa noite</p>
-                    @endif
-                    <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
-                </div>
-            </div>
+          </div>
         </div>
-        <div class="carousel-item">
-            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                <rect width="100%" height="100%" fill="#777" />
-            </svg>
-
-            <div class="container">
-                <div class="carousel-caption">
-                    <h1>Another example headline.</h1>
-                    <p>Some representative placeholder content for the second slide of the carousel.</p>
-                    <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
-                </div>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                <rect width="100%" height="100%" fill="#777" />
-            </svg>
-
-            <div class="container">
-                <div class="carousel-caption text-end">
-                    <h1>One more for good measure.</h1>
-                    <p>Some representative placeholder content for the third slide of this carousel.</p>
-                    <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
-</div>
+  </div>
 
 
-<!-- Marketing messaging and featurettes
-================================================== -->
-<!-- Wrap the rest of the page in another container to center all the content. -->
+  <!-- Marketing messaging and featurettes
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
 
-<div class="container marketing">
+  <h2 class="h2 display-3 text-center mb-5">Alguns frameworks que usam Node.js</h2>
+
+  <div class="container marketing">
 
     <!-- Three columns of text below the carousel -->
     <div class="row">
-        <div class="col-lg-4">
-            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
-                <title>Placeholder</title>
-                <rect width="100%" height="100%" fill="#777" /><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
-            </svg>
-
-            <h2>Heading</h2>
-            <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
-            <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
-                <title>Placeholder</title>
-                <rect width="100%" height="100%" fill="#777" /><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
-            </svg>
-
-            <h2>Heading</h2>
-            <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
-            <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
-                <title>Placeholder</title>
-                <rect width="100%" height="100%" fill="#777" /><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
-            </svg>
-
-            <h2>Heading</h2>
-            <p>And lastly this, the third column of representative placeholder content.</p>
-            <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-    </div><!-- /.row -->
+      <div class="col-lg-4">
+        <img src="{{asset("img/logo-react-js.png")}}" class="bd-placeholder-img rounded-circle img-thumbnail" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140" />
+        <h2>React.js</h2>
+        <p>React faz com que a criação de UIs interativas seja uma tarefa fácil. Crie views simples para cada estado na sua aplicação, e o React irá atualizar e renderizar de forma eficiente apenas os componentes necessários na medida em que os dados mudam.</p>
+      </div>
+      <div class="col-lg-4">
+        <img src="{{asset("img/nest-js-logo.jpeg")}}" class="bd-placeholder-img rounded-circle img-thumbnail" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"></img>
+        <h2>Nest.js</h2>
+        <p>Nest é um framework para a construção de aplicativos Node.js do lado do servidor eficientes e escalonáveis. Ele usa JavaScript moderno, é construído com TypeScript (preserva a compatibilidade com JavaScript puro) e combina elementos de OOP (Programação Orientada a Objetos), FP (Programação Funcional) e FRP (Programação Reativa Funcional).</p>
+      </div>
+      <div class="col-lg-4">
+        <img src="{{asset("img/vue-js-logo.jpg")}}" class="bd-placeholder-img rounded-circle img-thumbnail" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"></img>
+        <h2>Vue.js</h2>
+        <p>O Vue.js conta com uma arquitetura que pode ser adotada de forma incremental, e que foca na renderização declarativa e na composição de componentes. Funcionalidades avançadas necessárias para aplicações complexas (como encaminhamento, gestão de estados e automação de compilação) são oferecidas por meio de bibliotecas e pacotes de suporte mantidos oficialmente [8], sendo o Nuxt.js como uma das soluções mais populares.</p>
+      </div>
+    </div>
 
 
     <!-- START THE FEATURETTES -->
 
     <hr class="featurette-divider">
 
-    <div class="row featurette">
-        <div class="col-md-7">
-            <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
-            <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
-        </div>
-        <div class="col-md-5">
-            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
-                <title>Placeholder</title>
-                <rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
-            </svg>
+    <h2 class="h2 display-3 text-center mb-5">Vantagens do Node.js</h2>
 
-        </div>
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Produtividade</h2>
+        <p class="lead">Como o JavaScript é a linguagem mais usada em desenvolvimento web, o Node.js já conta com uma gama de possibilidades, inclusive com a reutilização de códigos, em que as equipes podem aproveitar melhor os recursos disponíveis.</p>
+      </div>
+      <div class="col-md-5">
+        <img src="{{asset("img/produtividade.png")}}" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500"/>
+      </div>
     </div>
 
     <hr class="featurette-divider">
 
     <div class="row featurette">
-        <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
-            <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
-        </div>
-        <div class="col-md-5 order-md-1">
-            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
-                <title>Placeholder</title>
-                <rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
-            </svg>
-
-        </div>
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">Flexibilidade</h2>
+        <p class="lead">O Node.js é uma plataforma muito versátil e que pode ser usada em inúmeros cenários. Seu gerenciador de pacotes (Node Package Manager) é classificado como o maior repositório de softwares disponível, sendo que o pacote mais famoso é um framework voltado a desenvolvimento web, chamado Express.js.</p>
+      </div>
+      <div class="col-md-5">
+        <img src="{{asset("img/flexibilidade.jpeg")}}" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500"/>
+      </div>
     </div>
 
     <hr class="featurette-divider">
 
     <div class="row featurette">
-        <div class="col-md-7">
-            <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-            <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
-        </div>
-        <div class="col-md-5">
-            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
-                <title>Placeholder</title>
-                <rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
-            </svg>
-
-        </div>
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Leveza</h2>
+        <p class="lead">Como já citamos, devido ao seu formato single thread, os recursos computacionais são consideravelmente menos exigidos ao usar a linguagem Node. A velocidade na disponibilização de um sistema para uso (deploy) e na replicação de máquinas pode crescer muito.</p>
+      </div>
+      <div class="col-md-5">
+        <img src="{{asset("img/leveza.jpg")}}" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500"/>
+      </div>
     </div>
 
     <hr class="featurette-divider">
 
     <!-- /END THE FEATURETTES -->
 
-</div><!-- /.container -->
+  </div><!-- /.container -->
 @endsection

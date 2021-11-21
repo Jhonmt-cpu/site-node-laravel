@@ -14,6 +14,6 @@ class ContactsController extends Controller
             'email' => $request->email,
         ]);
 
-        return "Contato salvo";
+        return view('site.contact', ['success'=>true]);
     }
 }

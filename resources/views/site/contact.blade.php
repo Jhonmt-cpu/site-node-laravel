@@ -1,13 +1,15 @@
 @extends('site.master.layout');
 
 @section('content')
-<div class="jumbotron">
+
+<div class="jumbotron mt-5">
     <div class="container text-center">
     <h1 class="display-4">Contato</h1>
     <hr class="my-4">
     <p class="lead">Caso queira que entremos em contato, deixe seu nome e email!</p>
     </div>
   </div>
+
 
     <div class="container py-5">
         <form action="{{ route('register_contact') }}" method="POST">
@@ -23,5 +25,10 @@
             </div>
             <button type="submit" class="btn btn-primary">Cadastrar</button>
           </form>
+          @if ($success ?? false)
+          <div class="alert alert-success" role="alert">
+            Contato cadastrado com sucesso!
+          </div>
+          @endif
     </div>
 @endsection
